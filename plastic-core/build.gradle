@@ -2,9 +2,6 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 25
-
-
-
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 25
@@ -21,12 +18,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.android.support:appcompat-v7:25.1.0'
-    compile 'junit:junit:4.12'
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api 'com.android.support.constraint:constraint-layout:1.0.2'
+    api 'com.android.support:appcompat-v7:25.1.0'
+    api 'junit:junit:4.12'
+    //字体图标
+    api 'com.joanzapata.iconify:android-iconify-ionicons:2.2.2'
+    api 'com.joanzapata.iconify:android-iconify-weathericons:2.2.2'
 }

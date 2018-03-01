@@ -2,9 +2,6 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 25
-
-
-
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 25
@@ -21,10 +18,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile project(':plastic-core')
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api project(':plastic-core')
 }
